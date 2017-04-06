@@ -1,0 +1,151 @@
+<!-- By Abigail McManus -->
+<!-- 3/4/17 -->
+
+
+<!DOCTYPE html>
+<html lang = "eng">
+
+<head>
+
+	<meta name="author" content="Abigail McManus">
+	<meta name = "keywords" content = "Prantl's Bakery">
+	<meta name = "description" content = "Prantl's Bakery About">
+
+	<title>Prantl's Bakery</title>
+
+	<link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+	<link rel="stylesheet" href="ccs/jqx.base.css" />
+	<link rel="stylesheet" href="css/jqx.arctic.css" />
+	<link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css" />
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jqxcore.js"></script>
+	<script type="text/javascript" src="js/jqxscrollview.js"></script>
+	<script type="text/javascript" src="js/jqxbuttons.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+ 	
+ 	
+	<!--function is based on http://www.jqwidgets.com/jquery-widgets-demo/demos/jqxscrollview/index.htm#demos/jqxscrollview/defaultfunctionality.htm -->
+	<!--scrolls the images in the gallery -->
+ 	<script type="text/javascript">
+ 		$(function (){
+ 			$('#photoGallery').jqxScrollView({ width: 1000, height:500, buttonsOffset: [0,0], slideShow: true, showButtons: true });
+ 		});
+ 	</script>
+
+ 	<!--function to control tabs -->
+ 	<script>
+ 		$(function() {
+ 			$( "#tabs" ).tabs({
+ 				event: "mouseover"
+ 			});
+ 		});
+ 	</script>
+
+</head>
+
+<body>
+	
+	<div id="top_row">
+	<header>
+		<h1>Prantl's Bakery</h1>
+	</header>
+
+	<div id="nav">
+		<a href="index.html" class="selected">About</a>
+		<a href="menu.html">Menu</a>
+		<a href="occasions.html">Occasions</a>
+		<a href="visit.html">Visit</a>
+		<a href="contact.html">Contact Us</a>
+		<a href="data.html">Data Visualization</a>
+	</div>
+	</div>
+
+	<div id="content">
+
+		<br><br>
+		<!--photo gallery is based on http://www.jqwidgets.com/jquery-widgets-demo/demos/jqxscrollview/index.htm#demos/jqxscrollview/defaultfunctionality.htm -->
+		<!-- images appear in a slideshow and can be dragged to go forward or back -->		
+		<div id="photoGallery">
+
+			<div><div class="photo" style="background-image: url(images/store.jpg)"></div></div> <!--https://roadfood.com/wp-content/uploads/2016/09/Prantls-ext.jpg-->
+			<div><div class="photo" style="background-image: url(images/frosting.jpg)"></div></div> <!--http://www.andrew.cmu.edu/user/kbokil/250/Web%20Dev/images/last-word-making-mini-burnt-almond-tortes.jpg -->
+			<div><div class="photo" style="background-image: url(images/person.jpg)"></div></div> <!--http://www.andrew.cmu.edu/user/kbokil/250/Web%20Dev/images/Prantls-1-4.jpg -->
+			<div><div class="photo" style="background-image: url(images/torte.jpg)"></div></div> <!--http://i.huffpost.com/gen/1733006/thumbs/s-PRANTLS-CAKE-large640.jpg -->
+		</div><br><br>
+
+		<div id="tabs">
+			<!-- tabs organize all of the basic information to get to know more about Prantl's -->
+			
+			<!--tab navigation -->
+			<ul>
+				<li><a href="#tabs-1">About Us</a></li>
+				<li><a href="#tabs-2">Our Burnt Almond Torte</a></li>
+				<li><a href="#tabs-3">Social Media</a></li>
+			</ul>
+
+			<!-- tab content -->
+			<div id="tabs-1">
+				<h3>About Us</h3>
+				<p>
+					Prantl’s Bakery is a Pittsburgh institution. Its “Burnt Almond Torte” and 100+ sinful sweets have been a tradition for the last 40 years. In fact, there’s been a bakery in continuous operation at the flagship Shadyside store for over 100 years. Prantl’s is a bakery in the German tradition, with old-fashioned fruit Danish and nut-filled coffeecakes, but we can’t help but get excited about some of our “new favorites” as well, like key lime pie and our buttery croissants. 
+				</p>
+				<p>
+					Henry and Jane Prantl retired from the business in 2007. The bakery is now owned and operated by John M. Felice, who strives to maintain the tradition of high quality baked goods.
+				</p>
+			</div>
+
+			<div id="tabs-2">
+				<h3>Our Burnt Almond Torte</h3>
+				<!--feature on almond torte including article and video -->
+				<img src="images/almond-torte.jpg"> <!-- http://i.huffpost.com/gen/1733525/thumbs/s-BURNT-ALMOND-TORTE-large640.jpg -->
+				<p>
+					In addition to our mouth watering special order cakes, we are famous for our “Burnt Almond Torte”, which was conceived by Henry Prantl after a trip to California. There was an almond glut the year he went and the Almond Board was trying to get bakers to use almonds in new and inspiring ways. Henry picked up a few ideas and brought them back to Pittsburgh where he refined them into our current recipe for “Burnt Almond Torte”, a unique and addictive dessert.
+				</p>
+			
+				<p>
+					Huffington Post: “No cake made in any of the five boroughs of New York holds a candle to Prantl’s amazing burnt almond torte. It is possibly the BEST cake America has to offer.”
+					<a href="http://www.huffingtonpost.com/2014/04/14/prantls-torte-cake-almond_n_5133580.html" target="_blank">Full Article</a>
+				</p>
+
+				<!--Video https://www.youtube.com/watch?v=iLhlZciMfoQ -->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/iLhlZciMfoQ" frameborder="0" allowfullscreen></iframe>
+			</div>
+
+			<div id="tabs-3">
+				<h3>Social Media</h3>
+				<!--Social media links as icons -->
+				<a href="https://www.facebook.com/PrantlsBakery" target="_blank"><img src="images/facebook.png"></a>
+				<!-- image: https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/nrpLiSINthw.png -->
+				<a href="https://twitter.com/prantlsbakery" target="_blank"><img src="images/twitter.png"></a>
+				<!-- image: https://lh3.ggpht.com/lSLM0xhCA1RZOwaQcjhlwmsvaIQYaP3c5qbDKCgLALhydrgExnaSKZdGa8S3YtRuVA=w300 -->
+				<a href="https://www.instagram.com/prantls_bakery/" target="_blank"><img src="images/instagram.png"></a>
+				<!-- image: https://lh3.googleusercontent.com/aYbdIM1abwyVSUZLDKoE0CDZGRhlkpsaPOg9tNnBktUQYsXflwknnOn2Ge1Yr7rImGk=w300 -->
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

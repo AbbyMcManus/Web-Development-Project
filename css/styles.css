@@ -1,0 +1,439 @@
+/* By Abigail McManus */
+/* 3/4/17 */
+
+/* General styling for all pages */
+
+
+body {
+	background-color: #fffff7;
+	margin: 0;
+	font-family: "Helvetica Neue"
+}
+
+iframe {
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+/* Styling the top navigation bar */
+
+#top_row header {
+	text-align: center;
+	
+	/* vertical stripes based on http://codepen.io/chriscoyier/pen/dDhHe/ */
+	background: repeating-linear-gradient(
+		to right,
+		#ffffdd,
+		#ffffdd 20px,
+		#007749 20px,
+		#007749 40px 
+	);
+	border: 4px solid #007749;
+	height: 100px;
+}
+
+#top_row header h1 {
+	color: #00a665;
+	
+	/* create bordered box around the title */
+	background-color: #fffff7;
+	border: 3px solid #007749;
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 27px;
+	
+}
+
+/* highlight the page currently on */
+#nav a.selected {
+	background: #007749;
+	color: #fffff7;
+}
+
+#nav a {
+ 	text-decoration: none;
+ 	text-align: center;
+ 	color: #00a665;
+ 	font-size: 1.25em;
+ 	padding-left: 50px;
+ 	padding-right: 50px;
+ 	letter-spacing: 2px; 
+ }
+
+#nav {
+	text-align: center;
+	margin-top: 20px
+}
+
+
+
+
+
+
+/* Styling for Index Page */
+
+
+/* photo gallery style is based on http://www.jqwidgets.com/jquery-widgets-demo/demos/jqxscrollview/index.htm#demos/jqxscrollview/defaultfunctionality.htm */
+.photo {
+	width: 1000px;
+    height: 500px;
+    background-color: #fffff7;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+#photoGallery {
+	margin: auto;
+}
+
+/* end of photo gallery style based on jqwidgets.com */
+
+/* Style tabbed information at bottom */
+
+#tabs {
+	background: none;
+	border-width: 0px;
+	width: 75%;
+	margin: auto;
+}
+
+#tabs ul {
+	/* Get rid of the background behind the tabs based on http://keith-wood.name/uitabs.html*/
+	background: transparent;
+	border-width: 0px 0px 1px 0px;
+	border-color: #007749;
+}
+
+#tabs li {
+	border-color: #007749;
+}
+
+#tabs a {
+	color: #00a665;
+}
+
+#tabs div {
+	border-width: 0px 1px 1px 1px;
+	border-color: #007749;
+}
+
+#tabs-2 img {
+	float: left;
+	margin: 10px auto;
+}
+
+#tabs-2 p {
+	float: right;
+	width: 62.5%;
+}
+
+
+
+
+
+
+/* Styling for Menu Page */
+
+
+/* Menu sidebar navigation based on http://callmenick.com/post/single-page-site-with-smooth-scrolling-highlighted-link-and-fixed-navigation */
+/* Creates a fixed sidebar which jumps to each section and has smooth scrolling */
+
+#sidebar {
+	width: 300px;
+	float: left;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;	
+}
+
+#menu {
+	width: 724px;
+	margin: auto;
+	padding-left: 24px;
+}
+
+#sidebar nav.stick {
+	position: fixed;
+	top: 0;
+	z-index: 10000;
+	margin-top: 12px;
+}
+
+#sidebar ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 5px;
+	text-align: center;
+}
+
+
+#sidebar a {
+	text-decoration: none;
+	width: 100%;
+	color: #FFFFFF;
+	margin: 5px;
+}
+
+#sidebar nav {
+	width: 300px;
+	padding: 0;
+	background-color: #00a665;
+}
+
+/*end of code based on callmenick.com*/
+
+/*style the menu content, including tables of menu items */
+
+#menu h3 {
+	text-align: center;
+	color: #007749;
+	letter-spacing: 2px;
+}
+
+#menu table {
+	margin: auto;
+}
+
+.menu-table {
+	width: 75%;
+	text-align: right;
+}
+
+#menu img {
+	border: 3px solid #007749;
+	float: left;
+}
+
+
+
+
+
+
+
+/*Styling for Occasions Page */
+
+
+/* tabs-vertical styling from https://jqueryui.com/tabs/#vertical */
+.ui-tabs-vertical { 
+	width: 55em; 
+}
+.ui-tabs-vertical .ui-tabs-nav { 
+	padding: .2em .1em .2em .2em; 
+	float: left;
+	width: 12em; 
+}
+.ui-tabs-vertical .ui-tabs-nav li { 
+	clear: left; 
+	width: 100%; 
+	border-bottom-width: 1px !important; 
+	border-right-width: 0 !important; 
+	margin: 0 -1px .2em 0; 
+}
+.ui-tabs-vertical .ui-tabs-nav li a { 
+	display:block;
+}
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { 
+	padding-bottom: 0; 
+	padding-right: .1em; 
+	border-right-width: 1px; 
+}
+.ui-tabs-vertical .ui-tabs-panel { 
+	float: right; 
+	width: 40em;
+	padding: 1.26em;
+}
+
+#tabs-vertical {
+	background: none;
+	margin: 20px auto;
+	border-width: 0px;
+}
+
+/*end of styling based on https://jqueryui.com/tabs/#vertical */
+
+/*style to make background of tabs transparent */
+#tabs-vertical ul {
+	background: transparent;
+	border-width: 0px 1px 0px 0px;
+	border-color: #007749;;
+}
+
+#tabs-vertical li {
+	border-color: #007749;
+}
+
+#tabs-vertical a {
+	color: #00a665;
+}
+
+#tabs-vertical div {
+	border-width: 1px;
+	border-color: #007749;
+}
+
+/* Style content inside tabs */
+#tabs-vertical h3 {
+	color: #007749;
+}
+
+#tabs-vertical h4 {
+	color: #00a665;
+}
+
+
+#easter {
+	float: left;
+	margin: auto;
+}
+
+#bunny {
+	float: right;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+/* Style for Visit Page */
+
+
+/* style table */
+table {
+	width: 75%;
+	border-collapse: collapse;
+	margin: 50px auto;
+}
+
+.visit-title {
+	background-color: #00a665;
+	color: #ffffed;
+
+}
+
+/* style maps above table */
+#downtown {
+	float: left;
+	color: #007749;
+	width: 50%;
+	text-align: center;
+}
+
+#shadyside {
+	float: right;
+	color: #007749;
+	width: 50%;
+	text-align: center;
+}
+
+#downtown iframe {
+	width: 75%;
+}
+
+#shadyside iframe {
+	width: 75%;
+}
+
+/* style graph */
+#container-graph {
+	margin: auto;
+	width: 75%;
+	border: 2px solid #007749;
+}
+
+
+
+
+
+
+
+
+/* Style for Contact Page */
+
+
+/* style heading */
+#visitor {
+	text-align: center;
+	color: #007749;
+}
+
+/* style form */
+form {
+	width: 50%;
+	margin: auto;
+}
+
+legend {
+	color: #00a665;
+}
+
+fieldset {
+	border-color: #007749;
+}
+
+#submit {
+	border-width: 0px;
+}
+
+#submit input {
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+/* Style for Data Visualization Page */
+
+
+/*style color and size of accordion */
+#accordion {
+	width: 75%;
+	margin: 20px auto;
+	border-color: #00a665;
+}
+
+#accordion div {
+	height: 500px;
+}
+
+#accordion h4 {
+	color: #007749;
+	border-color: #00a665;
+}
+
+/*style colors of tabs inside accordion */
+
+#tabs-graph ul {
+	background: transparent;
+	border-color: #007749;
+}
+
+#tabs-graph li {
+	border-color: #007749;
+}
+
+#tabs-graph a {
+	color: #00a665;
+}
+
+#tabs-graph div {
+	background: #FFFFFF;
+}
+
+
+
+
+

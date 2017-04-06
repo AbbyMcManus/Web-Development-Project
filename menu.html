@@ -1,0 +1,233 @@
+<!-- By Abigail McManus -->
+<!-- 3/4/17 -->
+
+
+<!DOCTYPE html>
+<html lang = "eng">
+
+<head>
+
+	<meta name="author" content="Abigail McManus">
+	<meta name = "keywords" content = "Prantl's Bakery - Menu">
+	<meta name = "description" content = "Prantl's Bakery Menu">
+
+	<title>Prantl's Bakery</title>
+
+	<link rel="stylesheet" media="all" type="text/css" href=css/styles.css />
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+	<script type="text/javascript" src="js/scripts.js" ></script>
+ 
+</head>
+
+
+<body>
+	
+	<div id="top_row">
+	<header>
+		<h1>Prantl's Bakery</h1>
+	</header>
+
+	<div id="nav">
+		<a href="index.html">About</a>
+		<a href="menu.html" class="selected">Menu</a>
+		<a href="occasions.html">Occasions</a>
+		<a href="visit.html">Visit</a>
+		<a href="contact.html">Contact Us</a>
+		<a href="data.html">Data Visualization</a>
+	</div>
+	</div>
+
+	<div id="content">
+
+		<!-- a demonstration of a menu page which Prantl's could fill out with the rest of their menu items -->
+
+		
+
+		<div class="container clearfix">
+			
+			<!-- navigation based on http://callmenick.com/post/single-page-site-with-smooth-scrolling-highlighted-link-and-fixed-navigation -->
+			<div id="sidebar">
+				<div id="nav-anchor"></div>
+
+				<nav>
+					<ul>
+						<li><a href="#breakfast">Breakfast</a></li><br>
+						<li><a href="#donuts">Donuts</a></li><br>
+						<li><a href="#coffecakes">Coffeecakes</a></li><br>
+						<li><a href="#sweetloaves">Sweet Loaves</a></li><br>
+						<li><a href="#pies">Pies and Tarts</a></li><br>
+						<li><a href="#pastries">Pastries</a></li><br>
+						<li><a href="#cookies">Cookies and Brownies</a></li><br>
+						<li><a href="#cakes">Cakes and Tortes</a></li><br>
+						<li><a href="#custom">Custom Cakes</a></li><br>
+						<li><a href="#bread">Bread</a></li><br>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- Menu content, use table to store image, name, and price for each menu item -->
+			<div id="menu">
+
+				<!--All images on this page are from Prantl's menu website http://www.bakesmartonline.com/prantls/selectproduct.php?sub=Pies+%26+Tarts -->
+
+				<section id="breakfast">
+					<h3>Breakfast</h3>
+					<!-- Only a few of Prantl's breakfast items to demonstrate format of menu page -->
+					<table class="menu-table">
+						<tr>
+							<td rowspan="2"><img src="images/strudel.jpg"></td>
+							<th>Apple Strudel</th>
+						</tr>
+						<tr>
+							<td>$2.49</td>
+						</tr>
+
+						<tr>
+							<td rowspan="2"><img src="images/bear.jpg"></td>
+							<th>Bear Claw</th>
+						</tr>
+						<tr>
+							<td>$2.49</td>
+						</tr>
+						
+						<tr>
+							<td rowspan="2"><img src="images/butter.jpg"></td>
+							<th>Butter Graham</th>
+						</tr>
+						<tr>
+							<td>$1.99</td>
+						</tr>
+
+						<tr>
+							<td rowspan="2"><img src="images/cinnamon-roll.jpg"></td>
+							<th>Cinnamon Roll</th>
+						</tr>
+						<tr>
+							<td>$2.49</td>
+						</tr>
+						
+					</table>
+									
+				</section>
+
+
+				<section id="donuts">
+					<h3>Donuts</h3>
+					<!-- Only a few of their donuts -->
+					<table class="menu-table">
+						<tr>
+							<td rowspan="2"><img src="images/choc-donut.jpg"></td>
+							<th>Chocolate Cake Donut</th>
+						</tr>
+						<tr>
+							<td>$1.25</td>
+						</tr>
+
+						<tr>
+							<td rowspan="2"><img src="images/plain-donut.jpg"></td>
+							<th>Plain Cake Donut</th>
+						</tr>
+						<tr>
+							<td>$1.25</td>
+						</tr>
+						
+						<tr>
+							<td rowspan="2"><img src="images/powdered-donut.jpg"></td>
+							<th>Powdered Cake Donut</th>
+						</tr>
+						<tr>
+							<td>$1.25</td>
+						</tr>
+					</table>
+
+				</section>
+
+				<section id="coffecakes">
+					<h3>Coffeecakes</h3>
+					<!-- Only a few of their coffeecakes -->
+					<table class="menu-table">
+						<tr>
+							<td rowspan="2"><img src="images/almond-coffee.jpg"></td>
+							<th>Almond Coffee Cake</th>
+						</tr>
+						<tr>
+							<td>$8.99</td>
+						</tr>
+
+						<tr>
+							<td rowspan="2"><img src="images/cherry-coffee.jpg"></td>
+							<th>Cherry Coffee Cake</th>
+						</tr>
+						<tr>
+							<td>$8.99</td>
+						</tr>
+						
+						<tr>
+							<td rowspan="2"><img src="images/pecan-coffee.jpg"></td>
+							<th>Chewy Pecan Coffee Cake</th>
+						</tr>
+						<tr>
+							<td>$8.99</td>
+						</tr>
+					</table>
+
+				</section>
+
+				<!--Prantl's could fill out the rest of the menu categories -->
+
+				<section id="sweetloaves">
+					<h3>Sweetloaves</h3>
+					<p>Place sweetloave menu items here</p>
+
+				</section>
+
+				<section id="pies">
+					<h3>Pies and Tarts</h3>
+					<p>Place pie and tart menu items here</p>
+				</section>
+				
+				<section id="pastries">
+					<h3>Pastries</h3>
+					<p>Place pastry menu items here</p>
+				</section>
+
+				<section id="cookies">
+					<h3>Cookies and Brownies</h3>
+					<p>Place cookie and brownie menu items here</p>
+				</section>
+
+				<section id="cakes">
+					<h3>Cakes and Tortes</h3>
+					<p>Place cake and torte menu items here</p>
+				</section>
+
+				<section id="custom">
+					<h3>Custom Cakes</h3>
+					<p>Place custom cake menu items here</p>
+				</section>
+
+				<section id="bread">
+					<h3>Bread</h3>
+					<p>Place bread menu items here</p>
+				</section>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,271 @@
+<!-- By Abigail McManus -->
+<!-- 3/4/17 -->
+
+
+<!-- My additional feature -->
+
+<!DOCTYPE html>
+<html lang = "eng">
+
+<head>
+
+	<meta name="author" content="Abigail McManus">
+	<meta name = "keywords" content = "Prantl's Bakery - Data Visualization">
+	<meta name = "description" content = "Prantl's Bakery Data Visualization">
+
+	<title>Prantl's Bakery</title>
+
+	<link rel="stylesheet" media="all" type="text/css" href=css/styles.css />
+	<link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css" />
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js" ></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+ 	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+  	
+  	<script>
+ 		$(function() {
+ 			$( "#accordion" ).accordion();
+ 		});
+ 	</script>	
+
+ 	 <script>
+ 		$(function() {
+ 			$( "#tabs-graph" ).tabs({
+ 				event: "mouseover"
+ 			});
+ 		});
+ 	</script>
+
+ 	<!-- first graph, so that Prantl's can see their sales revenue broken down by category of items to know what kinds of items they are selling -->
+ 	<!-- this could help with marketing (such as if they know they're breakfast items aren't selling, they can promot breakfast more) or for deciding new menu items or which menu items to cut -->
+ 	<script type="text/javascript">
+ 	$(function () {
+ 		$('#container-graph-categories').highcharts({
+ 			chart: {
+ 				type: 'pie'
+ 			},
+ 			title: {
+ 				text: 'Sales Revenue by Category'
+ 			},
+
+ 			/*pie chart format based on http://www.highcharts.com/demo/pie-basic */
+ 			plotOptions: {
+ 				pie: {
+ 					allowPointSelect: true,
+ 					cursor: 'pointer',
+ 					dataLabels: {
+ 						enabled: true,
+ 						format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+ 					}
+ 				}
+ 			},
+
+ 			series: [{
+ 				name: 'Categories', /* some general categories of Prantl's menu items with a percent of how much of the store's revenue that category accounts for */
+ 				colorByPoint: true,
+ 				data: [{
+ 					name: 'Breakfast',
+ 					y: 14.5
+ 				}, {
+ 					name: 'Cakes and Tortes',
+ 					y: 31.2,
+ 					sliced: true,
+ 					selected: true
+ 				}, {
+ 					name: 'Bread',
+ 					y: 5.1
+ 				}, {
+ 					name: 'Cookies and Brownies',
+ 					y: 19.6
+ 				}, {
+ 					name: 'Pies and Tartes',
+ 					y: 9.9
+ 				}, {
+ 					name: 'Pastries',
+ 					y: 19.7
+ 				}]
+ 			}]
+ 		});
+ 	});
+ 	</script>
+
+ 	<!-- Second graph, a polar column graph to visualize the sales of the most popular items at Prantl's -->
+ 	<!-- This can help them with deciding which products to market or feature more and which menu items to keep -->
+ 	<script type="text/javascript">
+ 	$(function () {
+ 		$('#container-graph-items').highcharts({
+ 			chart: {
+ 				type: 'column',
+ 				polar: true
+ 			},
+ 			title: {
+ 				text: 'Most Popular Items'
+ 			},
+
+ 			xAxis: {
+ 				categories: ['Burnt Almond Torte', 'Chocolate Cupcake', 'Chocolate Chip Cookie', 'Traditional Brownie', 'Glazed Donut', 'Carrot Cake'] 
+ 				/* some possible most popular items for Prantl's */
+ 			},
+
+ 			series: [{
+ 				name: 'Average Sales per day ($)',
+ 				colorByPoint: true,
+ 				data: [412, 245, 296, 227, 194, 258], /* possible average sales of each item a day */
+ 				showInLegend: false
+ 			}]
+ 		});
+ 	});
+ 	</script>
+
+ 	<!-- Third graph, an area graph which shows daily sales revenues for March -->
+ 	<!-- Prantl's can use this to visualize total sales and the sales of specific items or categories, so they can see how their sales are fluctuating over time and whether they are increasing or decreasing sales -->
+ 	<!-- This would be usefull for targeting what days of the week or times of the year they need to improve sales (or if they should just close on a certain day) and also can help them decide which items they need to either improve the sales of, make more of, or stop selling -->
+ 	<script type="text/javascript">
+ 	$(function () {
+ 		$('#container-graph-march').highcharts({
+ 			chart: {
+ 				type: 'area'
+ 			},
+ 			
+ 			title: {
+ 				text: 'Daily Sales Revenue'
+ 			},
+
+ 			subtitle: {
+ 				text: 'Month of March 2017'
+ 			},
+ 			
+
+ 			yAxis: {
+ 				title: {
+ 					text: 'Sales Revenue ($)'
+ 				}
+ 			},
+
+
+ 			plotOptions: {
+ 				series: {
+ 					pointStart: 1  /*start on first day of the month */
+ 				}
+ 			},
+
+ 			xAxis: {
+ 				title: {
+ 					text: 'Day of March'
+ 				}
+ 			},
+
+ 			series: [{
+ 				name: 'Total',
+ 				data: [3450, 2900, 4102, 3677, 3850, 2904, 2768, 3201, 3987, 4521, 4323, 3000, 2011, 2340, 4200, 3450, 2311, 3235, 2334, 4432, 3323, 3786, 3656, 3024, 2890, 2764, 3456, 3466, 2356, 4346, 2353]
+ 				},{
+ 					name: 'Burnt Almond Torte', /*possible menu item to also look at daily sales of, Prantl's could add more items */
+ 					data: [520, 300, 454, 392, 390, 435, 254, 295, 389, 423, 456, 434, 475, 423, 410, 398, 434, 367, 356, 389, 403, 410, 430, 443, 423, 411, 365, 378, 423, 467, 432]
+ 			}]
+
+ 		});
+ 	});
+ 	</script>
+
+ 	<!-- fourth graph, the same as the third graph but for April instead of March.  Prantl's could add more graphs of differnet months' sales -->
+	<script type="text/javascript">
+ 	$(function () {
+ 		$('#container-graph-april').highcharts({
+ 			chart: {
+ 				type: 'area'
+ 			},
+ 			
+ 			title: {
+ 				text: 'Daily Sales Revenue'
+ 			},
+
+ 			subtitle: {
+ 				text: 'Month of April 2017'
+ 			},
+ 			
+
+ 			yAxis: {
+ 				title: {
+ 					text: 'Sales Revenue ($)'
+ 				}
+ 			},
+
+
+ 			plotOptions: {
+ 				series: {
+ 					pointStart: 1
+ 				}
+ 			},
+
+ 			xAxis: {
+ 				title: {
+ 					text: 'Day of April'
+ 				},
+ 				allowDecimals: false
+ 			},
+
+ 			series: [{
+ 				name: 'Total',
+ 				data: [3562, 3672, 3204]
+ 				},{
+ 					name: 'Burnt Almond Torte',
+ 					data: [435, 467, 410]
+ 			}]
+ 		});
+ 	});
+ 	</script>
+
+ 
+</head>
+
+
+<body>
+	
+	<div id="top_row">
+	<header>
+		<h1>Prantl's Bakery</h1>
+	</header>
+
+	<div id="nav">
+		<a href="index.html">About</a>
+		<a href="menu.html">Menu</a>
+		<a href="occasions.html">Occasions</a>
+		<a href="visit.html">Visit</a>
+		<a href="contact.html">Contact Us</a>
+		<a href="data.html" class="selected">Data Visualization</a>
+	</div>
+	</div>
+
+	<div id="content">
+		<!-- organize different kinds of graphs in accordion -->
+		<div id="accordion">
+			<h4>Sales Revenue by Categories</h4>
+				<div id="container-graph-categories"></div>
+
+			<h4>Most Popular Items</h4>
+				<div id="container-graph-items"></div>
+			
+			<h4>Sales Revenue by Day</h4>
+				<!--organize each months' graph in a separate tab -->
+				<div id="tabs-graph">
+					<ul>
+						<li><a href="#tabs-g-1">March</a></li>
+						<li><a href="#tabs-g-2">April</a></li>
+					</ul>
+
+					<div id="tabs-g-1">
+						<div id="container-graph-march"></div>
+					</div>
+
+					<div id="tabs-g-2">
+						<div id="container-graph-april"></div>
+					</div>
+				</div>
+		</div>
+	</div>
+</body>
+
+</html>

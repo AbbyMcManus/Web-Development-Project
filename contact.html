@@ -1,0 +1,91 @@
+<!-- By Abigail McManus -->
+<!-- 3/4/17 -->
+
+
+<!DOCTYPE html>
+<html lang = "eng">
+
+<head>
+
+	<meta name="author" content="Abigail McManus">
+	<meta name = "keywords" content = "Prantl's Bakery - Contact">
+	<meta name = "description" content = "Prantl's Bakery Contact">
+
+	<title>Prantl's Bakery</title>
+
+	<link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+ 
+</head>
+
+<body>
+	
+
+	<div id="top_row">
+	<header>
+		<h1>Prantl's Bakery</h1>
+	</header>
+
+	<div id="nav">
+		<a href="index.html">About</a>
+		<a href="menu.html">Menu</a>
+		<a href="occasions.html">Occasions</a>
+		<a href="visit.html">Visit</a>
+		<a href="contact.html" class="selected">Contact Us</a>
+		<a href="data.html">Data Visualization</a>
+	</div>
+	</div>
+
+	<div id="content">
+		<h3 id="visitor">Visitor Inquiry Form</h3>
+
+		<form name="contact us" onsubmit="return validate()" action="mailto:infoneeded@prantlsbakery.com"> <!--opens up email when the form submits (after it checks its valid)-->
+
+			<fieldset>
+				<legend>Your Information</legend>
+					<label for="name">Name (required):</label><br>
+					<input type="text" name="Name" id="name" placeholder="Your Name" size="20" maxlength="250" required><br>
+					<br>
+
+					<label for="zip">Zip Code (must be a 5-digit number):</label><br>
+					<input type="test" name="zip" id="zip" placeholder="-----" size="5" maxlength="5"><br>
+					<br>
+
+					<label for="email">Email (required):</label><br>
+					<input type="email" name="Email" id="email" placeholder="abc@defg.com" required><br>
+					<br>
+			</fieldset>
+
+			<fieldset>
+				<legend>Your Inquiry</legend>
+					<label for="message">Write your message here:</label><br>
+					<textarea name="Message" id="message" cols="75" rows="20" maxlength="1000"></textarea><br>
+					<br>
+			</fieldset>
+
+			<fieldset>
+				<legend>Keep in Touch</legend>
+					<input type="checkbox" name="mailinglist" id="mailinglist" value="Yes">Subscribe to Prantl's mailing list<br>
+					<br>
+			</fieldset>
+
+			<fieldset id = "submit">
+				<input type="image" name="submit" src="images/Submit.png" alt="Submit"> <!-- image as submit button: http://www.jillcards.net/images/Submit.png -->
+			</fieldset>
+			
+		</form>
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
